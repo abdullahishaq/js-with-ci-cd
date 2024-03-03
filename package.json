@@ -5,6 +5,7 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/abdullahishaq/js-with-ci-cd/issues"
   },
-  "homepage": "https://github.com/abdullahishaq/js-with-ci-cd#readme"
+  "homepage": "https://github.com/abdullahishaq/js-with-ci-cd#readme",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1"
+  }
 }
