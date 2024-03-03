@@ -1,0 +1,19 @@
+{
+  "name": "js-with-ci-cd",
+  "version": "1.0.0",
+  "description": "Running my own rock-paper-scissors javascript to run through a GitHub actions ci/cd pipeline",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdullahishaq/js-with-ci-cd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdullahishaq/js-with-ci-cd/issues"
+  },
+  "homepage": "https://github.com/abdullahishaq/js-with-ci-cd#readme"
+}
