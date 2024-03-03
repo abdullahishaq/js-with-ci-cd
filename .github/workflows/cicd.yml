@@ -1,23 +1,28 @@
 name: CI
 
 on:
-    push:
-        branches:
-            - main
-    workflow_dispatch:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v2
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-            - name: Validate HTML
-              run: npm install -g html-validate && html-validate index.html
+      - name: Validate HTML
+        run: npm install -g html-validate && html-validate index.html
 
-            - name: Validate JS
-              run: npm install eslint --save-dev
-                   npx eslint --init
-                   npm install -g eslint && eslint script.js
-            
+      - name: Install ESLint
+        run: npm install eslint --save-dev
+
+      - name: Initialize ESLint configuration
+        run: npx eslint --init
+
+      - name: Run ESLint
+        run: npm run lint  # Assuming you have a lint script in your package.json
+
+      # Optionally, you may want to add a step to commit ESLint configuration file if it's not ignored
